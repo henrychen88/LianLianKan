@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA16DC571981E4F7002F34E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC561981E4F7002F34E6 /* Foundation.framework */; };
+		BA16DC591981E4F7002F34E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */; };
+		BA16DC5B1981E4F7002F34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC5A1981E4F7002F34E6 /* UIKit.framework */; };
+		BA16DC611981E4F7002F34E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA16DC5F1981E4F7002F34E6 /* InfoPlist.strings */; };
+		BA16DC631981E4F7002F34E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC621981E4F7002F34E6 /* main.m */; };
+		BA16DC671981E4F7002F34E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC661981E4F7002F34E6 /* AppDelegate.m */; };
+		BA16DC691981E4F7002F34E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA16DC681981E4F7002F34E6 /* Images.xcassets */; };
+		BA16DC701981E4F7002F34E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC6F1981E4F7002F34E6 /* XCTest.framework */; };
+		BA16DC711981E4F7002F34E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC561981E4F7002F34E6 /* Foundation.framework */; };
+		BA16DC721981E4F7002F34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC5A1981E4F7002F34E6 /* UIKit.framework */; };
+		BA16DC7A1981E4F7002F34E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA16DC781981E4F7002F34E6 /* InfoPlist.strings */; };
+		BA16DC7C1981E4F7002F34E6 /* LianLianKanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC7B1981E4F7002F34E6 /* LianLianKanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA16DC731981E4F7002F34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA16DC4B1981E4F7002F34E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA16DC521981E4F7002F34E6;
+			remoteInfo = LianLianKan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA16DC531981E4F7002F34E6 /* LianLianKan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LianLianKan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA16DC561981E4F7002F34E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA16DC5A1981E4F7002F34E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA16DC5E1981E4F7002F34E6 /* LianLianKan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LianLianKan-Info.plist"; sourceTree = "<group>"; };
+		BA16DC601981E4F7002F34E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA16DC621981E4F7002F34E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA16DC641981E4F7002F34E6 /* LianLianKan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LianLianKan-Prefix.pch"; sourceTree = "<group>"; };
+		BA16DC651981E4F7002F34E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA16DC661981E4F7002F34E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA16DC681981E4F7002F34E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA16DC6E1981E4F7002F34E6 /* LianLianKanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LianLianKanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA16DC6F1981E4F7002F34E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BA16DC771981E4F7002F34E6 /* LianLianKanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LianLianKanTests-Info.plist"; sourceTree = "<group>"; };
+		BA16DC791981E4F7002F34E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA16DC7B1981E4F7002F34E6 /* LianLianKanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LianLianKanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA16DC501981E4F7002F34E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC591981E4F7002F34E6 /* CoreGraphics.framework in Frameworks */,
+				BA16DC5B1981E4F7002F34E6 /* UIKit.framework in Frameworks */,
+				BA16DC571981E4F7002F34E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA16DC6B1981E4F7002F34E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC701981E4F7002F34E6 /* XCTest.framework in Frameworks */,
+				BA16DC721981E4F7002F34E6 /* UIKit.framework in Frameworks */,
+				BA16DC711981E4F7002F34E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA16DC4A1981E4F7002F34E6 = {
+			isa = PBXGroup;
+			children = (
+				BA16DC5C1981E4F7002F34E6 /* LianLianKan */,
+				BA16DC751981E4F7002F34E6 /* LianLianKanTests */,
+				BA16DC551981E4F7002F34E6 /* Frameworks */,
+				BA16DC541981E4F7002F34E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA16DC541981E4F7002F34E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC531981E4F7002F34E6 /* LianLianKan.app */,
+				BA16DC6E1981E4F7002F34E6 /* LianLianKanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA16DC551981E4F7002F34E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC561981E4F7002F34E6 /* Foundation.framework */,
+				BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */,
+				BA16DC5A1981E4F7002F34E6 /* UIKit.framework */,
+				BA16DC6F1981E4F7002F34E6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA16DC5C1981E4F7002F34E6 /* LianLianKan */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC651981E4F7002F34E6 /* AppDelegate.h */,
+				BA16DC661981E4F7002F34E6 /* AppDelegate.m */,
+				BA16DC681981E4F7002F34E6 /* Images.xcassets */,
+				BA16DC5D1981E4F7002F34E6 /* Supporting Files */,
+			);
+			path = LianLianKan;
+			sourceTree = "<group>";
+		};
+		BA16DC5D1981E4F7002F34E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC5E1981E4F7002F34E6 /* LianLianKan-Info.plist */,
+				BA16DC5F1981E4F7002F34E6 /* InfoPlist.strings */,
+				BA16DC621981E4F7002F34E6 /* main.m */,
+				BA16DC641981E4F7002F34E6 /* LianLianKan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA16DC751981E4F7002F34E6 /* LianLianKanTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC7B1981E4F7002F34E6 /* LianLianKanTests.m */,
+				BA16DC761981E4F7002F34E6 /* Supporting Files */,
+			);
+			path = LianLianKanTests;
+			sourceTree = "<group>";
+		};
+		BA16DC761981E4F7002F34E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC771981E4F7002F34E6 /* LianLianKanTests-Info.plist */,
+				BA16DC781981E4F7002F34E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA16DC521981E4F7002F34E6 /* LianLianKan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA16DC7F1981E4F7002F34E6 /* Build configuration list for PBXNativeTarget "LianLianKan" */;
+			buildPhases = (
+				BA16DC4F1981E4F7002F34E6 /* Sources */,
+				BA16DC501981E4F7002F34E6 /* Frameworks */,
+				BA16DC511981E4F7002F34E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LianLianKan;
+			productName = LianLianKan;
+			productReference = BA16DC531981E4F7002F34E6 /* LianLianKan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA16DC6D1981E4F7002F34E6 /* LianLianKanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA16DC821981E4F7002F34E6 /* Build configuration list for PBXNativeTarget "LianLianKanTests" */;
+			buildPhases = (
+				BA16DC6A1981E4F7002F34E6 /* Sources */,
+				BA16DC6B1981E4F7002F34E6 /* Frameworks */,
+				BA16DC6C1981E4F7002F34E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA16DC741981E4F7002F34E6 /* PBXTargetDependency */,
+			);
+			name = LianLianKanTests;
+			productName = LianLianKanTests;
+			productReference = BA16DC6E1981E4F7002F34E6 /* LianLianKanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA16DC4B1981E4F7002F34E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ichint;
+				TargetAttributes = {
+					BA16DC6D1981E4F7002F34E6 = {
+						TestTargetID = BA16DC521981E4F7002F34E6;
+					};
+				};
+			};
+			buildConfigurationList = BA16DC4E1981E4F7002F34E6 /* Build configuration list for PBXProject "LianLianKan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA16DC4A1981E4F7002F34E6;
+			productRefGroup = BA16DC541981E4F7002F34E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA16DC521981E4F7002F34E6 /* LianLianKan */,
+				BA16DC6D1981E4F7002F34E6 /* LianLianKanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA16DC511981E4F7002F34E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC611981E4F7002F34E6 /* InfoPlist.strings in Resources */,
+				BA16DC691981E4F7002F34E6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA16DC6C1981E4F7002F34E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC7A1981E4F7002F34E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA16DC4F1981E4F7002F34E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC671981E4F7002F34E6 /* AppDelegate.m in Sources */,
+				BA16DC631981E4F7002F34E6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA16DC6A1981E4F7002F34E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DC7C1981E4F7002F34E6 /* LianLianKanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA16DC741981E4F7002F34E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA16DC521981E4F7002F34E6 /* LianLianKan */;
+			targetProxy = BA16DC731981E4F7002F34E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA16DC5F1981E4F7002F34E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA16DC601981E4F7002F34E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA16DC781981E4F7002F34E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA16DC791981E4F7002F34E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA16DC7D1981E4F7002F34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA16DC7E1981E4F7002F34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA16DC801981E4F7002F34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LianLianKan/LianLianKan-Prefix.pch";
+				INFOPLIST_FILE = "LianLianKan/LianLianKan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA16DC811981E4F7002F34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LianLianKan/LianLianKan-Prefix.pch";
+				INFOPLIST_FILE = "LianLianKan/LianLianKan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA16DC831981E4F7002F34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LianLianKan.app/LianLianKan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LianLianKan/LianLianKan-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LianLianKanTests/LianLianKanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BA16DC841981E4F7002F34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LianLianKan.app/LianLianKan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LianLianKan/LianLianKan-Prefix.pch";
+				INFOPLIST_FILE = "LianLianKanTests/LianLianKanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA16DC4E1981E4F7002F34E6 /* Build configuration list for PBXProject "LianLianKan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA16DC7D1981E4F7002F34E6 /* Debug */,
+				BA16DC7E1981E4F7002F34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA16DC7F1981E4F7002F34E6 /* Build configuration list for PBXNativeTarget "LianLianKan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA16DC801981E4F7002F34E6 /* Debug */,
+				BA16DC811981E4F7002F34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA16DC821981E4F7002F34E6 /* Build configuration list for PBXNativeTarget "LianLianKanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA16DC831981E4F7002F34E6 /* Debug */,
+				BA16DC841981E4F7002F34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA16DC4B1981E4F7002F34E6 /* Project object */;
+}
