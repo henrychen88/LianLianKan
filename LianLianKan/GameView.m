@@ -21,6 +21,8 @@
 
 @implementation GameView
 
+#pragma mark - 初始化
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -79,6 +81,31 @@
     }
 }
 
+- (void)outOrderArray
+{
+    NSMutableArray *originArray = [[NSMutableArray alloc]init];
+    for (NSInteger i = 0; i < (_numberOfRows - 2) * (_numberOfSections - 2); i++) {
+        [originArray addObject:[NSNumber numberWithInteger:i]];
+    }
+    NSInteger count = [originArray count];
+    
+    NSAssert(count % 2 == 0, @"格子总数不能为奇数,请调整界面的frame属性");
+    
+    if (!_outOfOrderArray) {
+        _outOfOrderArray = [[NSMutableArray alloc]initWithCapacity:count];
+    }else{
+        [_outOfOrderArray removeAllObjects];
+    }
+    while (count > 0) {
+        NSInteger position = arc4random() % count;
+        [_outOfOrderArray addObject:[originArray objectAtIndex:position]];
+        [originArray removeObjectAtIndex:position];
+        count--;
+    }
+}
+
+#pragma mark - 事件处理
+
 - (void)didSeletedItem:(Item *)item
 {
     if (!self.seletedItem) {
@@ -106,10 +133,25 @@
     }
 }
 
+#pragma mark - 信息提示
+- (void)showNotice:(NSString *)notice
+{
+    _noticeLabel.text = notice;
+    _noticeLabel.hidden = NO;
+    
+    [self performSelector:@selector(dismissNoticeLabel) withObject:nil afterDelay:1];
+}
+
+- (void)dismissNoticeLabel
+{
+    _noticeLabel.hidden = YES;
+}
+
 - (BOOL)findRouteFrom:(CGPoint)startPoint to:(CGPoint)endPoint
 {
     if (startPoint.x == endPoint.x && startPoint.y == endPoint.y) {
         //自己
+        [self showNotice:@"两次是同一个元素"];
         return NO;
     }else if (startPoint.x == endPoint.x && startPoint.y != endPoint.y){
         //在一条竖线上
@@ -278,11 +320,8 @@
             if (startPointOffset.x < 0) {
                 canLeft = NO;
             }else{
-                
-                if ([self passableWithPoint:startPointOffset] && [self passableWithPoint:endPointOffset]) {
-                    if ([self checkFrom:startPoint to:endPoint byPoint1:startPointOffset point2:endPointOffset]) {
-                        return YES;
-                    }
+                if ([self checkFrom:startPoint to:endPoint byPoint1:startPointOffset point2:endPointOffset]) {
+                    return YES;
                 }
             }
         }
@@ -296,10 +335,8 @@
             if (startPointOffset.x > _numberOfRows * ITEM_SIZE) {
                 canRight = NO;
             }else{
-                if ([self passableWithPoint:startPointOffset] && [self passableWithPoint:endPointOffset]){
-                    if ([self checkFrom:startPoint to:endPoint byPoint1:startPointOffset point2:endPointOffset]) {
-                        return YES;
-                    }
+                if ([self checkFrom:startPoint to:endPoint byPoint1:startPointOffset point2:endPointOffset]) {
+                    return YES;
                 }
             }
         }
@@ -309,7 +346,6 @@
 }
 
 //一个拐角
-
 - (BOOL)oneBreakPoint:(CGPoint)startPoint to:(CGPoint)endPoint
 {
     if ([self checkFrom:startPoint to:endPoint by:CGPointMake(startPoint.x, endPoint.y)]) {
@@ -381,6 +417,7 @@
     for (NSValue *value in self.existCenterArray) {
         CGPoint existPoint = [value CGPointValue];
         if (point.x == existPoint.x && point.y== existPoint.y) {
+            NSLog(@"%@挡住了去路", NSStringFromCGPoint(existPoint));
             return NO;
         }
     }
@@ -403,11 +440,11 @@
         NSInteger order = (startPoint.y > endPoint.y) ? -1 : 1;
         CGFloat start = startPoint.y + order * ITEM_SIZE;
         while (start != endPoint.y) {
-            start += order * ITEM_SIZE;
             [array addObject:[NSValue valueWithCGPoint:CGPointMake(endPoint.x, start)]];
+            start += order * ITEM_SIZE;
         }
     }else{
-        NSAssert(NO, @"xxx");
+        NSAssert(NO, @"两点不在一条直线上");
     }
     return array;
 }
@@ -422,19 +459,6 @@
 - (BOOL)isInVerticalStraightLine:(CGPoint)startPoint withPoint:(CGPoint)endPoint
 {
     return (startPoint.x == endPoint.x && startPoint.y != endPoint.y);
-}
-
-- (void)showNotice:(NSString *)notice
-{
-    _noticeLabel.text = notice;
-    _noticeLabel.hidden = NO;
-    
-    [self performSelector:@selector(dismissNoticeLabel) withObject:nil afterDelay:1];
-}
-
-- (void)dismissNoticeLabel
-{
-    _noticeLabel.hidden = YES;
 }
 
 - (void)showWiredViewWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint breakPoints:(NSMutableArray *)arrays
@@ -456,29 +480,6 @@
     return CGPointMake(ITEM_SIZE * (row + 1), ITEM_SIZE * (section + 1));
 }
 
-- (void)outOrderArray
-{
-    NSMutableArray *originArray = [[NSMutableArray alloc]init];
-    for (NSInteger i = 0; i < (_numberOfRows - 2) * (_numberOfSections - 2); i++) {
-        [originArray addObject:[NSNumber numberWithInteger:i]];
-    }
-    NSInteger count = [originArray count];
-    
-    NSAssert(count % 2 == 0, @"格子总数不能为奇数");
 
-    NSLog(@"originArray:%@",originArray);
-    if (!_outOfOrderArray) {
-        _outOfOrderArray = [[NSMutableArray alloc]initWithCapacity:count];
-    }else{
-        [_outOfOrderArray removeAllObjects];
-    }
-    while (count > 0) {
-        NSInteger position = arc4random() % count;
-        [_outOfOrderArray addObject:[originArray objectAtIndex:position]];
-        [originArray removeObjectAtIndex:position];
-        count--;
-    }
-    NSLog(@"outOfOrderArray:%@",_outOfOrderArray);
-}
 
 @end
