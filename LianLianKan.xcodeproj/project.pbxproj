@@ -19,6 +19,11 @@
 		BA16DC721981E4F7002F34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC5A1981E4F7002F34E6 /* UIKit.framework */; };
 		BA16DC7A1981E4F7002F34E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA16DC781981E4F7002F34E6 /* InfoPlist.strings */; };
 		BA16DC7C1981E4F7002F34E6 /* LianLianKanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC7B1981E4F7002F34E6 /* LianLianKanTests.m */; };
+		BA16DC881981E5A5002F34E6 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC871981E5A5002F34E6 /* ItemInfo.m */; };
+		BA16DC8B1981E8EC002F34E6 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC8A1981E8EC002F34E6 /* Item.m */; };
+		BA16DC8E1981F1F1002F34E6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC8D1981F1F1002F34E6 /* BaseViewController.m */; };
+		BA16DC911981F743002F34E6 /* WiredView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC901981F743002F34E6 /* WiredView.m */; };
+		BA16DC941981FACF002F34E6 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA16DC931981FACF002F34E6 /* GameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,16 @@
 		BA16DC771981E4F7002F34E6 /* LianLianKanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LianLianKanTests-Info.plist"; sourceTree = "<group>"; };
 		BA16DC791981E4F7002F34E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA16DC7B1981E4F7002F34E6 /* LianLianKanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LianLianKanTests.m; sourceTree = "<group>"; };
+		BA16DC861981E5A5002F34E6 /* ItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInfo.h; sourceTree = "<group>"; };
+		BA16DC871981E5A5002F34E6 /* ItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInfo.m; sourceTree = "<group>"; };
+		BA16DC891981E8EC002F34E6 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		BA16DC8A1981E8EC002F34E6 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		BA16DC8C1981F1F1002F34E6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		BA16DC8D1981F1F1002F34E6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		BA16DC8F1981F743002F34E6 /* WiredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiredView.h; sourceTree = "<group>"; };
+		BA16DC901981F743002F34E6 /* WiredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiredView.m; sourceTree = "<group>"; };
+		BA16DC921981FACF002F34E6 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		BA16DC931981FACF002F34E6 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +122,13 @@
 		BA16DC5C1981E4F7002F34E6 /* LianLianKan */ = {
 			isa = PBXGroup;
 			children = (
+				BA16DC851981E586002F34E6 /* Model */,
 				BA16DC651981E4F7002F34E6 /* AppDelegate.h */,
 				BA16DC661981E4F7002F34E6 /* AppDelegate.m */,
 				BA16DC681981E4F7002F34E6 /* Images.xcassets */,
 				BA16DC5D1981E4F7002F34E6 /* Supporting Files */,
+				BA16DC8C1981F1F1002F34E6 /* BaseViewController.h */,
+				BA16DC8D1981F1F1002F34E6 /* BaseViewController.m */,
 			);
 			path = LianLianKan;
 			sourceTree = "<group>";
@@ -142,6 +160,21 @@
 				BA16DC781981E4F7002F34E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA16DC851981E586002F34E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DC861981E5A5002F34E6 /* ItemInfo.h */,
+				BA16DC871981E5A5002F34E6 /* ItemInfo.m */,
+				BA16DC891981E8EC002F34E6 /* Item.h */,
+				BA16DC8A1981E8EC002F34E6 /* Item.m */,
+				BA16DC8F1981F743002F34E6 /* WiredView.h */,
+				BA16DC901981F743002F34E6 /* WiredView.m */,
+				BA16DC921981FACF002F34E6 /* GameView.h */,
+				BA16DC931981FACF002F34E6 /* GameView.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA16DC911981F743002F34E6 /* WiredView.m in Sources */,
+				BA16DC8B1981E8EC002F34E6 /* Item.m in Sources */,
+				BA16DC8E1981F1F1002F34E6 /* BaseViewController.m in Sources */,
+				BA16DC881981E5A5002F34E6 /* ItemInfo.m in Sources */,
 				BA16DC671981E4F7002F34E6 /* AppDelegate.m in Sources */,
 				BA16DC631981E4F7002F34E6 /* main.m in Sources */,
+				BA16DC941981FACF002F34E6 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
