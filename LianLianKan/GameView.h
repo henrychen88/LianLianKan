@@ -11,4 +11,6 @@
 
 @interface GameView : UIView
 
+- (void) reset;
+
 @end

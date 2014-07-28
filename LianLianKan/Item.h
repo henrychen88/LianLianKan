@@ -11,12 +11,13 @@
 
 #define ITEM_SIZE 40
 
-@interface Item : UILabel
+@interface Item : UIView
 
 typedef void (^SelectBlock) (Item *item);
 
 @property(nonatomic, strong) ItemInfo *itemInfo;
 @property(nonatomic, assign) ItemInfoType type;
+@property(nonatomic, strong) UIImage *img;
 @property(nonatomic) BOOL selected;
 @property(nonatomic, copy) SelectBlock selectBlock;
 

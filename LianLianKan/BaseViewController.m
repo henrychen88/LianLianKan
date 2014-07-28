@@ -10,19 +10,13 @@
 #import "GameView.h"
 
 @interface BaseViewController ()
-
+{
+    UIButton *resetButton, *pauseButton;
+    GameView *gameView;
+}
 @end
 
 @implementation BaseViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -35,14 +29,20 @@
 //    [self.view addSubview:item];
 //    [item setFrame:CGRectMake(100, 100, 40, 40)];
     
-    GameView *gameView = [[GameView alloc]initWithFrame:self.view.bounds];
+    gameView = [[GameView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:gameView];
+    
+    resetButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [resetButton setFrame:CGRectMake(0, self.view.frame.size.height - 40, 60, 40)];
+    [resetButton setTitle:@"重来" forState:UIControlStateNormal];
+    [resetButton setBackgroundColor:[UIColor grayColor]];
+    [resetButton addTarget:self action:@selector(resetAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:resetButton];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)resetAction
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [gameView reset];
 }
 
 /*

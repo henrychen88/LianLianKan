@@ -27,8 +27,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor colorWithRed:30 / 255.0 green:34 / 255.0 blue:43 / 255.0 alpha:1];
         self.numberOfRows = (NSInteger)floorf(frame.size.width / ITEM_SIZE);
         self.numberOfSections = (NSInteger)floorf(frame.size.height / ITEM_SIZE);
+        
+        [self reset];
+        
+        /*
         [self outOrderArray];
         [self addItems];
         
@@ -43,14 +48,39 @@
         _wiredView.hidden = YES;
         _wiredView.backgroundColor = [UIColor clearColor];
         [self addSubview:_wiredView];
+         */
     }
     return self;
 }
 
+- (void) reset
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self outOrderArray];
+    [self addItems];
+    
+    _noticeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, self.bounds.size.width, 20)];
+    _noticeLabel.alpha = 0.5;
+    _noticeLabel.hidden = YES;
+    _noticeLabel.textAlignment = NSTextAlignmentCenter;
+    _noticeLabel.textColor = [UIColor redColor];
+    [self addSubview:_noticeLabel];
+    
+    _wiredView = [[WiredView alloc]initWithFrame:self.bounds];
+    _wiredView.hidden = YES;
+    _wiredView.backgroundColor = [UIColor clearColor];
+    [self addSubview:_wiredView];
+}
+
 - (void)addItems
 {
-    _existCenterArray = [[NSMutableArray alloc]init];
-    NSInteger itemInfoTypeCounts = 8;
+    if (!_existCenterArray) {
+        _existCenterArray = [[NSMutableArray alloc]init];
+    }else{
+        [_existCenterArray removeAllObjects];
+    }
+
+    NSInteger itemInfoTypeCounts = 7;
     NSInteger countPerType = (NSInteger)([_outOfOrderArray count] / itemInfoTypeCounts);
     NSInteger j = 1;
     NSInteger type = 0;
@@ -62,6 +92,7 @@
             temp -= 1;
         }
         
+        NSLog(@"type：%d", type);
         Item *item = [[Item alloc]initWithType:type];
         item.tag = i + 1;
         [item setSelectBlock:^(Item *item) {
@@ -77,6 +108,10 @@
         if (i == temp) {
             j++;
             type++;
+        }
+        
+        if (type == itemInfoTypeCounts) {
+            type = itemInfoTypeCounts - 1;
         }
     }
 }

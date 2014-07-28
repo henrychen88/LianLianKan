@@ -11,34 +11,54 @@
 @interface ItemInfo ()
 @property(nonatomic, assign, readwrite) NSString *text;
 @property(nonatomic, strong, readwrite) UIColor *backgroundColor;
+@property(nonatomic, strong, readwrite) UIImage *pic;
 @end
 
 @implementation ItemInfo
 
 + (NSString *)getTextByType:(ItemInfoType)type
 {
-    return [NSString stringWithFormat:@"%d",type + 1];
+    return [NSString stringWithFormat:@"%ld",type + 1];
 }
 
 + (UIColor *) getColorByType:(ItemInfoType)type
 {
-    if (type == ItemInfoTypeOne) {
+    if (type == ItemInfoTypeBlue) {
         return [UIColor redColor];
-    }else if (type == ItemInfoTypeTwo){
+    }else if (type == ItemInfoTypeGreen){
         return [UIColor greenColor];
-    }else if (type == ItemInfoTypeThree){
+    }else if (type == ItemInfoTypeOrange){
         return [UIColor blueColor];
-    }else if (type == ItemInfoTypeFour){
+    }else if (type == ItemInfoTypePurple){
         return [UIColor brownColor];
-    }else if (type == ItemInfoTypeFive){
+    }else if (type == ItemInfoTypeRed){
         return [UIColor purpleColor];
-    }else if (type == ItemInfoTypeSix){
+    }else if (type == ItemInfoTypeWhite){
         return [UIColor yellowColor];
-    }else if (type == ItemInfoTypeSeven){
+    }else if (type == ItemInfoTypeYellow){
         return [UIColor cyanColor];
-    }else{
-        return [UIColor blackColor];
     }
+    return nil;
+}
+
++ (UIImage *) getPicByType:(ItemInfoType)type
+{
+    if (type == ItemInfoTypeBlue) {
+        return [UIImage imageNamed:@"StyleBlue"];
+    }else if (type == ItemInfoTypeGreen){
+        return [UIImage imageNamed:@"StyleGreen"];
+    }else if (type == ItemInfoTypeOrange){
+        return [UIImage imageNamed:@"StyleOrange"];
+    }else if (type == ItemInfoTypePurple){
+        return [UIImage imageNamed:@"StylePurple"];
+    }else if (type == ItemInfoTypeRed){
+        return [UIImage imageNamed:@"StyleRed"];
+    }else if (type == ItemInfoTypeWhite){
+        return [UIImage imageNamed:@"StyleWhite"];
+    }else if (type == ItemInfoTypeYellow){
+        return [UIImage imageNamed:@"StyleYellow"];
+    }
+    return nil;
 }
 
 @end

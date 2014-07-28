@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, ItemInfoType) {
-    ItemInfoTypeOne,
-    ItemInfoTypeTwo,
-    ItemInfoTypeThree,
-    ItemInfoTypeFour,
-    ItemInfoTypeFive,
-    ItemInfoTypeSix,
-    ItemInfoTypeSeven,
-    ItemInfoTypeDefault
+    ItemInfoTypeBlue,
+    ItemInfoTypeGreen,
+    ItemInfoTypeOrange,
+    ItemInfoTypePurple,
+    ItemInfoTypeRed,
+    ItemInfoTypeWhite,
+    ItemInfoTypeYellow,
 };
 
 @interface ItemInfo : NSObject
@@ -24,5 +23,7 @@ typedef NS_ENUM(NSInteger, ItemInfoType) {
 + (UIColor *) getColorByType:(ItemInfoType)type;
 
 + (NSString *) getTextByType:(ItemInfoType)type;
+
++ (UIImage *) getPicByType:(ItemInfoType)type;
 
 @end
