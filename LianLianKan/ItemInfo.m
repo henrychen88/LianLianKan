@@ -18,7 +18,7 @@
 
 + (NSString *)getTextByType:(ItemInfoType)type
 {
-    return [NSString stringWithFormat:@"%ld",type + 1];
+    return [NSString stringWithFormat:@"%d",type + 1];
 }
 
 + (UIColor *) getColorByType:(ItemInfoType)type

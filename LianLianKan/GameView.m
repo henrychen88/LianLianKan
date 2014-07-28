@@ -92,11 +92,9 @@
             temp -= 1;
         }
         
-        NSLog(@"type：%d", type);
         Item *item = [[Item alloc]initWithType:type];
         item.tag = i + 1;
         [item setSelectBlock:^(Item *item) {
-            NSLog(@"item.frame : %@", NSStringFromCGRect(item.frame));
             [self didSeletedItem:item];
         }];
         CGRect frame = item.frame;
@@ -198,8 +196,6 @@
             return NO;
         }
     }else if (startPoint.x != endPoint.x && startPoint.y == endPoint.y){
-
-        NSLog(@"xx");
         //在一条水平线上
         
         if ([self horizontalStraightLineFrom:startPoint to:endPoint]) {

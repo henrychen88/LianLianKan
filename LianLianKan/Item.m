@@ -35,7 +35,6 @@
 - (void) buttonAction
 {
     self.selected = !self.selected;
-    NSLog(@"xxx");
     if (self.selectBlock) {
         self.selectBlock(self);
     }
