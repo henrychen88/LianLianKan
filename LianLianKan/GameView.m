@@ -8,6 +8,7 @@
 
 #import "GameView.h"
 #import "WiredView.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface GameView ()
 @property(nonatomic, assign) NSInteger numberOfRows;
@@ -17,9 +18,13 @@
 @property(nonatomic, strong) NSMutableArray *existCenterArray;
 @property(nonatomic, strong) WiredView *wiredView;
 @property(nonatomic, strong) UILabel *noticeLabel;
+
 @end
 
 @implementation GameView
+
+SystemSoundID selectedSound;
+SystemSoundID wiredSound;
 
 #pragma mark - 初始化
 
@@ -30,6 +35,12 @@
         self.backgroundColor = [UIColor colorWithRed:30 / 255.0 green:34 / 255.0 blue:43 / 255.0 alpha:1];
         self.numberOfRows = (NSInteger)floorf(frame.size.width / ITEM_SIZE);
         self.numberOfSections = (NSInteger)floorf(frame.size.height / ITEM_SIZE);
+        
+        NSURL *seletedURL = [[NSBundle mainBundle] URLForResource:@"gu" withExtension:@"wav"];
+        NSURL *wiredURL = [[NSBundle mainBundle] URLForResource:@"dis" withExtension:@"wav"];
+        
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(seletedURL), &selectedSound);
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(wiredURL), &wiredSound);
         
         [self reset];
         
@@ -143,24 +154,29 @@
 {
     if (!self.seletedItem) {
         self.seletedItem = item;
+        AudioServicesPlaySystemSound(selectedSound);
     }else{
         if (self.seletedItem.tag == item.tag) {
             //自己
+            AudioServicesPlaySystemSound(selectedSound);
             return;
         }else if (self.seletedItem.type != item.type){
             [self showNotice:@"类型不一样"];
             [self.seletedItem setSelected:NO];
             [item setSelected:NO];
             self.seletedItem = nil;
+            AudioServicesPlaySystemSound(selectedSound);
         }else{
             if ([self findRouteFrom:self.seletedItem.center to:item.center]) {
                 [self.seletedItem removeFromSuperview];
                 [item removeFromSuperview];
                 self.seletedItem = nil;
+                AudioServicesPlaySystemSound(wiredSound);
             }else{
                 [self.seletedItem setSelected:NO];
                 [item setSelected:NO];
                 self.seletedItem = nil;
+                AudioServicesPlaySystemSound(selectedSound);
             }
         }
     }

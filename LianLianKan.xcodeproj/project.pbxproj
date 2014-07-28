@@ -10,6 +10,9 @@
 		BA165C4F1985F65600642A5B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA165C4D1985F65600642A5B /* icon.png */; };
 		BA165C501985F65600642A5B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA165C4E1985F65600642A5B /* icon@2x.png */; };
 		BA165C521985F65D00642A5B /* icon-120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA165C511985F65D00642A5B /* icon-120@2x.png */; };
+		BA165C541986314800642A5B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA165C531986314800642A5B /* AudioToolbox.framework */; };
+		BA165C571986319A00642A5B /* dis.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA165C551986319A00642A5B /* dis.wav */; };
+		BA165C5A1986488300642A5B /* gu.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA165C591986488300642A5B /* gu.wav */; };
 		BA16DC571981E4F7002F34E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC561981E4F7002F34E6 /* Foundation.framework */; };
 		BA16DC591981E4F7002F34E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */; };
 		BA16DC5B1981E4F7002F34E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA16DC5A1981E4F7002F34E6 /* UIKit.framework */; };
@@ -43,6 +46,9 @@
 		BA165C4D1985F65600642A5B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BA165C4E1985F65600642A5B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		BA165C511985F65D00642A5B /* icon-120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120@2x.png"; sourceTree = "<group>"; };
+		BA165C531986314800642A5B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BA165C551986319A00642A5B /* dis.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dis.wav; sourceTree = "<group>"; };
+		BA165C591986488300642A5B /* gu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gu.wav; sourceTree = "<group>"; };
 		BA16DC531981E4F7002F34E6 /* LianLianKan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LianLianKan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA16DC561981E4F7002F34E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA165C541986314800642A5B /* AudioToolbox.framework in Frameworks */,
 				BA16DC591981E4F7002F34E6 /* CoreGraphics.framework in Frameworks */,
 				BA16DC5B1981E4F7002F34E6 /* UIKit.framework in Frameworks */,
 				BA16DC571981E4F7002F34E6 /* Foundation.framework in Frameworks */,
@@ -98,6 +105,8 @@
 		BA165C4C1985F64A00642A5B /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				BA165C591986488300642A5B /* gu.wav */,
+				BA165C551986319A00642A5B /* dis.wav */,
 				BA165C511985F65D00642A5B /* icon-120@2x.png */,
 				BA165C4D1985F65600642A5B /* icon.png */,
 				BA165C4E1985F65600642A5B /* icon@2x.png */,
@@ -127,6 +136,7 @@
 		BA16DC551981E4F7002F34E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA165C531986314800642A5B /* AudioToolbox.framework */,
 				BA16DC561981E4F7002F34E6 /* Foundation.framework */,
 				BA16DC581981E4F7002F34E6 /* CoreGraphics.framework */,
 				BA16DC5A1981E4F7002F34E6 /* UIKit.framework */,
@@ -272,6 +282,8 @@
 				BA16DC611981E4F7002F34E6 /* InfoPlist.strings in Resources */,
 				BA165C501985F65600642A5B /* icon@2x.png in Resources */,
 				BA16DC691981E4F7002F34E6 /* Images.xcassets in Resources */,
+				BA165C571986319A00642A5B /* dis.wav in Resources */,
+				BA165C5A1986488300642A5B /* gu.wav in Resources */,
 				BA165C4F1985F65600642A5B /* icon.png in Resources */,
 				BA165C521985F65D00642A5B /* icon-120@2x.png in Resources */,
 			);
